@@ -594,40 +594,9 @@ module.exports = {
   experimental: { appDir: true }
 }
 
-module.exports = nextConfig;
-import { Analytics } from "@vercel/analytics/next"
 
-vercel --prod
-vercel env pull
 
-npm install @vercel/edge-config
 
-import { NextResponse } from 'next/server';
-import { get } from '@vercel/edge-config';
-
-export const config = { matcher: '/welcome' };
-
-export async function middleware() {
-  const greeting = await get('greeting');
-  // NextResponse.json requires at least Next v13.1 or
-  // enabling experimental.allowMiddlewareResponseBody in next.config.js
-  return NextResponse.json(greeting);
-} 
-{
-  "greeting": "hello world"
-}
-  
-  
-npm install next react react-dom
-
-yarn add next react react-dom
-
-/meuprojeto/app/package.jsonapp
-
-npx create-next-app astro-vedic
-cd astro-vedic
-npm install next-intl tailwindcss @headlessui/react @heroicons/react stripe @vercel/analytics
-npx tailwindcss init -p
 
 
 
