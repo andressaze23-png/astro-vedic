@@ -1,0 +1,107 @@
+# Crie a pasta do projeto
+mkdir astro-vedic && cd astro-vedic
+
+# Inicialize o Git
+git init
+
+# Adicione os arquivos (vedic-astro/
+├─ app/
+│  ├─ [locale]/
+│  │  ├─ layout.tsx
+│  │  ├─ page.tsx
+│  │  ├─ consultas/page.tsx
+│  │  ├─ sobre/page.tsx
+│  │  ├─ contato/page.tsx
+│  │  └─ checkout/page.tsx
+│  └─ globals.css
+├─ components/
+│  ├─ Nav.tsx
+│  ├─ Footer.tsx
+│  └─ Card.tsx
+├─ messages/
+│  ├─ pt-BR.json
+│  ├─ en.json
+│  └─ es.json
+├─ lib/
+│  └─ payments.ts
+├─ public/
+│  └─ logo.svg
+├─ tailwind.config.js
+├─ package.json
+└─ README.md
+ {
+  "name": "vedic-astro",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "14.0.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "next-intl": "^3.0.0",
+    "tailwindcss": "^3.3.0"
+  }
+}
+ module.exports = {
+  content: ['./app/**/*.{ts,tsx}', './components/**/*.{ts,tsx}'],
+  theme: {
+    extend: {}
+  },
+  plugins: []
+};
+ @tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --gold: #D4AF37;
+  --deep-blue: #1A2A40;
+  --beige: #F5F2E7;
+  --soft-gray: #C9C9C9;
+  --soft-pink: #E8C6C6;
+}
+
+body {
+  background: var(--beige);
+  color: var(--deep-blue);
+}
+ {
+  "Home": {
+    "title": "Astrologia Védica — a ciência da luz aplicada à sua vida",
+    "subtitle": "Sou Andressa, astróloga védica. Minha missão é iluminar o caminho da vida, ajudando você a compreender o Karma, o propósito e o destino.",
+    "inspire": "Cada mapa védico é como uma estrela única no céu, revelando ciclos, aprendizados e oportunidades que guiam sua jornada.",
+    "cta": "Solicitar consulta escrita"
+  }
+}
+ {
+  "Home": {
+    "title": "Vedic Astrology — the science of light applied to your life",
+    "subtitle": "I’m Andressa, a Vedic astrologer. My mission is to illuminate the path of life, guiding you to understand Karma, purpose, and destiny.",
+    "inspire": "Every Vedic chart is like a unique star in the sky, revealing cycles, lessons, and opportunities that guide your journey.",
+    "cta": "Request written consultation"
+  }
+}
+ {
+  "Home": {
+    "title": "Astrología Védica — la ciencia de la luz aplicada a tu vida",
+    "subtitle": "Soy Andressa, astróloga védica. Mi misión es iluminar el camino de la vida, ayudándote a comprender el Karma, el propósito y el destino.",
+    "inspire": "Cada carta védica es como una estrella única en el cielo, revelando ciclos, aprendizajes y oportunidades que guían tu viaje.",
+    "cta": "Solicitar consulta escrita"
+  }
+}
+)
+# (copie os arquivos que te mostrei antes para dentro desta pasta)
+
+# Adicione tudo ao commit
+git add .
+git commit -m "Primeira versão do site Jyotish"
+
+# Conecte ao repositório remoto (substitua pelo seu link do GitHub)
+git remote add origin https://github.com/andressaze23-png/vedic-astro.git
+
+# Envie os arquivos
+git push -u origin main
+
