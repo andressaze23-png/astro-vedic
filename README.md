@@ -462,14 +462,6 @@ body {
 )
 
 
-git add .
-git commit -m "Primeira versão do site Jyotish"
-
-git remote add origin https://github.com/andressaze23-png/vedic-astro.git
-
-git push -u origin main
-
-git add . && git commit -m "fix: add next dependency" && git push
 
 // app/[locale]/checkout/page.tsx
 import { useTranslations } from 'next-intl';
