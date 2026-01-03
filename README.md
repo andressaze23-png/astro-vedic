@@ -549,12 +549,9 @@ export async function middleware() {
 {
   "name": "astro-vedic",
   "version": "1.0.0",
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start"
-  },
-  "devDependencies": {"next": "14.0.0",
+  
+  "devDependencies": {
+  "next": "14.0.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "next-intl": "^3.0.0",
@@ -565,7 +562,9 @@ export async function middleware() {
   "next": "^14.0.0"
 }
 npm install next react react-dom
+
 yarn add next react react-dom
+
 /meuprojeto/app/package.jsonapp
 
 
