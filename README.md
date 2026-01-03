@@ -28,6 +28,8 @@ export default async function RootLayout({children, params: {locale}}) {
 import Link from 'next/link';
 import {useTranslations} from 'next-intl';
 
+npm i @vercel/analytics
+
 export default function Nav({locale}: {locale: string}) {
   const t = useTranslations('Nav');
   const switchTo = locale === 'pt-BR' ? 'en' : locale === 'en' ? 'es' : 'pt-BR';
