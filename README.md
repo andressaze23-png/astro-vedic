@@ -30,7 +30,7 @@ git init
 ├─ package.json
 └─ README.md
  {
-  "name": "vedic-astro",
+  "name": "astro-vedic",
   "version": "1.0.0",
   "scripts": {
     "dev": "next dev",
