@@ -93,3 +93,103 @@ git push -u origin main
 
 git add . && git commit -m "fix: add next dependency" && git push
 
+// app/[locale]/checkout/page.tsx
+import {useTranslations} from 'next-intl';
+import Link from 'next/link';
+import {PAYPAL_LINK, PIX_INFO} from '@/lib/payments';
+
+export default function Checkout() {
+  const t = useTranslations('Checkout');
+  return (
+    <section className="space-y-6">
+      <h1 className="text-3xl font-semibold">{t('title')}</h1>
+      <form className="grid gap-4 bg-white p-6 rounded border">
+        <label className="grid gap-1">
+          <span>{t('name')}</span>
+          <input className="border rounded px-3 py-2" required />
+        </label>
+        <label className="grid gap-1">
+          <span>{t('email')}</span>
+          <input type="email" className="border rounded px-3 py-2" required />
+        </label>
+        <label className="grid gap-1">
+          <span>{t('birth')}</span>
+          <textarea className="border rounded px-3 py-2" placeholder={t('birthPlaceholder')} required />
+        </label>
+
+        <div className="space-y-2">
+          <span className="font-semibold">{t('methodsTitle')}</span>
+          <div className="grid md:grid-cols-2 gap-3">
+            <Link href={PAYPAL_LINK} className="text-center bg-[#1A2A40] text-white px-6 py-3 rounded hover:bg-[#D4AF37] hover:text-[#1A2A40] transition">
+              {t('payPaypal')}
+            </Link>
+            <button type="button" className="text-center bg-white border border-[#1A2A40] text-[#1A2A40] px-6 py-3 rounded hover:border-[#D4AF37] transition"
+              onClick={() => alert(PIX_INFO)}>
+              {t('payPix')}
+            </button>
+          </div>
+          <p className="text-sm text-[#1A2A40]">{t('pixNote')}</p>
+        </div>
+
+        <p className="text-sm text-[#1A2A40]">{t('refund')}</p>
+      </form>
+    </section>
+  );
+}
+// lib/payments.ts
+export const PAYPAL_LINK = 'https://www.paypal.com/paypalme/andressaze23'; // opção 1: PayPal.Me
+// Se preferir botão padrão, use: https://www.paypal.com/donate/?business=andressaze23%40gmail.com&no_recurring=0&currency_code=BRL
+export const PIX_INFO = 'Faça um Pix para a chave 92991618855 e envie o comprovante para andressaze23@gmail.com';
+
+// messages/pt-BR.json (Checkout)
+{
+  "Checkout": {
+    "title": "Checkout",
+    "name": "Nome completo",
+    "email": "E-mail",
+    "birth": "Dados de nascimento",
+    "birthPlaceholder": "Data, hora e local de nascimento",
+    "methodsTitle": "Formas de pagamento",
+    "payPaypal": "Pagar com PayPal",
+    "payPix": "Pagar com Pix",
+    "pixNote": "Após o Pix, envie o comprovante para andressaze23@gmail.com. Você receberá confirmação por e-mail.",
+    "refund": "Política de reembolso: cancelamentos antes da análise têm reembolso integral; após o início da análise, reembolso de 50%; após o envio do relatório, não há reembolso."
+  }
+}
+// messages/en.json (Checkout)
+{
+  "Checkout": {
+    "title": "Checkout",
+    "name": "Full name",
+    "email": "Email",
+    "birth": "Birth details",
+    "birthPlaceholder": "Date, time, and place of birth",
+    "methodsTitle": "Payment methods",
+    "payPaypal": "Pay with PayPal",
+    "payPix": "Pay with Pix",
+    "pixNote": "After Pix payment, send the receipt to andressaze23@gmail.com. You’ll receive confirmation by email.",
+    "refund": "Refund policy: cancellations before analysis receive a full refund; after analysis starts, 50% refund; after report delivery, no refund."
+  }
+}
+// messages/es.json (Checkout)
+{
+  "Checkout": {
+    "title": "Checkout",
+    "name": "Nombre completo",
+    "email": "Correo electrónico",
+    "birth": "Datos de nacimiento",
+    "birthPlaceholder": "Fecha, hora y lugar de nacimiento",
+    "methodsTitle": "Métodos de pago",
+    "payPaypal": "Pagar con PayPal",
+    "payPix": "Pagar con Pix",
+    "pixNote": "Después del pago por Pix, envía el comprobante a andressaze23@gmail.com. Recibirás confirmación por correo.",
+    "refund": "Política de reembolso: cancelaciones antes del análisis reciben reembolso total; después de iniciar el análisis, 50% de reembolso; después del envío del informe, no hay reembolso."
+  }
+}
+
+
+
+
+
+
+
