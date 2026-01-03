@@ -564,6 +564,37 @@ export const PIX_INFO = 'Faça um Pix para a chave 92991618855 e envie o comprov
   }
 }
 
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  reactStrictMode: true,
+  swcMinify: true,
+  // Habilita rotas dinâmicas de localização (/pt-BR, /en, /es)
+  i18n: {
+    locales: ['pt-BR', 'en', 'es'], // Todos os idiomas suportados
+    defaultLocale: 'pt-BR',         // Idioma padrão
+    // localeDetection: true         // Habilita auto-detecção do idioma do navegador (opcional)
+  },
+  images: {
+    // Se usar imagens remotas/personalizadas
+    domains: [],
+  },
+  experimental: {
+    // Permite uso de App Router e layouts (Next 13+)
+    appDir: true
+  }
+};
+
+module.exports = {
+  reactStrictMode: true,
+  swcMinify: true,
+  i18n: {
+    locales: ['pt-BR', 'en', 'es'],
+    defaultLocale: 'pt-BR',
+  },
+  experimental: { appDir: true }
+}
+
+module.exports = nextConfig;
 import { Analytics } from "@vercel/analytics/next"
 
 vercel --prod
