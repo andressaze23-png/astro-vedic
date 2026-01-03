@@ -31,13 +31,8 @@ git init
 └─ README.md
  {
   "name": "astro-vedic",
-  "version": "1.0.0",
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start"
+  "version": "1.0.0"
  
-}
  module.exports = {
   content: ['./app/**/*.{ts,tsx}', './components/**/*.{ts,tsx}'],
   theme: {
