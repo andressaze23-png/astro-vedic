@@ -562,7 +562,8 @@ export async function middleware() {
     "tailwindcss": "^3.3.0"
   }
 }
-
+npm install next react react-dom
+yarn add next react react-dom
 
 
 
