@@ -541,7 +541,11 @@ export async function middleware() {
   // NextResponse.json requires at least Next v13.1 or
   // enabling experimental.allowMiddlewareResponseBody in next.config.js
   return NextResponse.json(greeting);
+} 
+{
+  "greeting": "hello world"
 }
+
 
 
 
