@@ -10,7 +10,6 @@ import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
 
 export default async function RootLayout({ children, params: { locale } }: { children: React.ReactNode; params: { locale: string } }) {
-  const messages = (await import(`../../messages/${locale}.json`)).default;
   return (
     <html lang={locale}>
       <body className="bg-[#F5F2E7] text-[#1A2A40]">
@@ -585,7 +584,19 @@ module.exports = {
   },
   experimental: { appDir: true }
 }
+import ptBR from '../../messages/pt-BR.json';
+import en from '../../messages/en.json';
+import es from '../../messages/es.json';
 
+const messagesMap: Record<string, any> = {
+  'pt-BR': ptBR,
+  'en': en,
+  'es': es,
+};
+
+export default async function RootLayout({ children, params: { locale } }) {
+  const messages = messagesMap[locale] || messagesMap['pt-BR'];
+}
 
 
 
