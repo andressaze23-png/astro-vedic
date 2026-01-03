@@ -63,6 +63,7 @@ git init
   --soft-gray: #C9C9C9;
   --soft-pink: #E8C6C6;
 }
+npm install next react react-dom
 
 body {
   background: var(--beige);
