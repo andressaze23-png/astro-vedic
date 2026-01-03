@@ -36,14 +36,7 @@ git init
     "dev": "next dev",
     "build": "next build",
     "start": "next start"
-  },
-  "dependencies": {
-    "next": "14.0.0",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "next-intl": "^3.0.0",
-    "tailwindcss": "^3.3.0"
-  }
+ 
 }
  module.exports = {
   content: ['./app/**/*.{ts,tsx}', './components/**/*.{ts,tsx}'],
