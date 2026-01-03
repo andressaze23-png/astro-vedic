@@ -1,10 +1,10 @@
-# Crie a pasta do projeto
+
 mkdir astro-vedic && cd astro-vedic
 
-# Inicialize o Git
+
 git init
 
-# Adicione os arquivos (vedic-astro/
+
 ├─ app/
 │  ├─ [locale]/
 │  │  ├─ layout.tsx
@@ -93,15 +93,12 @@ body {
   }
 }
 )
-# (copie os arquivos que te mostrei antes para dentro desta pasta)
 
-# Adicione tudo ao commit
+
 git add .
 git commit -m "Primeira versão do site Jyotish"
 
-# Conecte ao repositório remoto (substitua pelo seu link do GitHub)
 git remote add origin https://github.com/andressaze23-png/vedic-astro.git
 
-# Envie os arquivos
 git push -u origin main
 
