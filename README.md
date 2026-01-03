@@ -526,6 +526,9 @@ export const PIX_INFO = 'Faça um Pix para a chave 92991618855 e envie o comprov
 
 import { Analytics } from "@vercel/analytics/next"
 
+vercel --prod
+
+
 
 
 
