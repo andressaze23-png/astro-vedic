@@ -527,6 +527,21 @@ export const PIX_INFO = 'Faça um Pix para a chave 92991618855 e envie o comprov
 import { Analytics } from "@vercel/analytics/next"
 
 vercel --prod
+vercel env pull
+
+npm install @vercel/edge-config
+
+import { NextResponse } from 'next/server';
+import { get } from '@vercel/edge-config';
+
+export const config = { matcher: '/welcome' };
+
+export async function middleware() {
+  const greeting = await get('greeting');
+  // NextResponse.json requires at least Next v13.1 or
+  // enabling experimental.allowMiddlewareResponseBody in next.config.js
+  return NextResponse.json(greeting);
+}
 
 
 
