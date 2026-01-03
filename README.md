@@ -1,8 +1,3 @@
-npx create-next-app astro-vedic
-cd astro-vedic
-npm install next-intl tailwindcss @headlessui/react @heroicons/react stripe
-npx tailwindcss init -p
-
 // app/[locale]/layout.tsx
 import { NextIntlClientProvider } from 'next-intl';
 import '../globals.css';
